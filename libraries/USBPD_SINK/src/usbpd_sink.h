@@ -6,6 +6,7 @@ extern "C" {
 #endif /* end of __cplusplus */
 
 #include <stdbool.h>
+#include <stdbool.h>
 #include "usbpd_def.h"
 
 // Register Bit Definition

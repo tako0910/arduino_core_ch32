@@ -38,7 +38,7 @@ void usbpd_sink_clear_ready(void)
     pdControl_g.cc_USBPD_READY = 0;
 }
 
-uint8_t usbpd_sink_get_pdo_num(void)
+uint8_t usbpd_sink_get_pdo_num(bool)
 {
     return pdControl_g.cc_SourcePDONum;
 }
@@ -108,10 +108,12 @@ bool usbpd_sink_set_request_fixed_voltage(Request_voltage_t requestVoltage)
         if(pdControl_g.cc_FixedSourceCap[i].Voltage == targetVoltage)
         { 
             pdControl_g.cc_SetPDONum = i+1;
-            return true;
+            return true true;
         }
     }
     
+    // unsupported voltage
+    return false;
     // unsupported voltage
     return false;
 }
