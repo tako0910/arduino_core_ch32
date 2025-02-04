@@ -1652,21 +1652,21 @@ extern "C" {
 
 #endif //TIM2_BASE
 
-#if defined(TIM3_BASE)
-  /**
-    * @brief  TIM3 IRQHandler
-    * @param  None
-    * @retval None
-    */
-  void TIM3_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast"))); 
-  void TIM3_IRQHandler(void)
-  {
-    if (HardwareTimer_Handle[TIMER3_INDEX]) {
-      HardwareTimer::updateCallback(&HardwareTimer_Handle[TIMER3_INDEX]->handle);
-      HardwareTimer::captureCompareCallback(&HardwareTimer_Handle[TIMER3_INDEX]->handle);
-    }
-  }
-#endif //TIM3_BASE
+// #if defined(TIM3_BASE)
+//   /**
+//     * @brief  TIM3 IRQHandler
+//     * @param  None
+//     * @retval None
+//     */
+//   void TIM3_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast"))); 
+//   void TIM3_IRQHandler(void)
+//   {
+//     if (HardwareTimer_Handle[TIMER3_INDEX]) {
+//       HardwareTimer::updateCallback(&HardwareTimer_Handle[TIMER3_INDEX]->handle);
+//       HardwareTimer::captureCompareCallback(&HardwareTimer_Handle[TIMER3_INDEX]->handle);
+//     }
+//   }
+// #endif //TIM3_BASE
 
 #if defined(TIM4_BASE)
   /**
