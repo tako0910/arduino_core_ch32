@@ -412,7 +412,7 @@ void usbpd_sink_process(void)
                 // Delay_Ms(2);
                 // printf("request\r\n");
 
-                if(pdControl_g.cc_SetPDONum <= (pdControl->cc_SourcePDONum - pdControl->cc_SourcePPSNum))
+                if(pdControl_g.cc_SetPDONum <= (pdControl_g.cc_SourcePDONum - pdControl_g.cc_SourcePPSNum))
                 {
                     usbpd_sink_fixed_pdo_request(fixedSourceCap, pdControl_g.cc_SetPDONum, &pdControl_g,usbpdTxBuffer);
                 }
