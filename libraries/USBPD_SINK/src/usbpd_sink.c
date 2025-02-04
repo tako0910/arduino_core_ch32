@@ -116,6 +116,27 @@ bool usbpd_sink_set_request_fixed_voltage(Request_voltage_t requestVoltage)
     return false;
 }
 
+bool usbpd_sink_set_request_pps_voltage(int ppsIndex, int targetVoltage)
+{
+    // Validate
+    if(ppsIndex > usbpd_sink_get_pps_num() || ppsIndex < 0)
+    {
+        // invalid pps index
+        return false;
+    }
+    if(usbpd_sink_get_pps_min_voltage(ppsIndex) > targetVoltage || usbpd_sink_get_pps_max_voltage(ppsIndex) < targetVoltage)
+    {
+        // voltage out of range
+        return false;
+    }
+
+    // Set requested voltage
+    pdControl_g.cc_SetPDONum = ppsIndex + 1 + usbpd_sink_get_pdo_num();
+    pdControl_g.cc_SetTargetVoltage = targetVoltage;
+    
+    return true;
+}
+
 void timer3_init(uint16_t arr, uint16_t psc)
 {
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
@@ -171,6 +192,7 @@ void usbpd_sink_reset(void)
     pdControl_g.cc_USBPD_READY = 0;
     pdControl_g.cc_SetPDONum = 1;
     pdControl_g.cc_LastSetPDONum = 1;
+    pdControl_g.cc_SetTargetVoltage = 0;
 }
 
 void usbpd_sink_init(void)
@@ -390,7 +412,14 @@ void usbpd_sink_process(void)
                 // Delay_Ms(2);
                 // printf("request\r\n");
 
-                usbpd_sink_fixed_pdo_request(fixedSourceCap, pdControl_g.cc_SetPDONum, &pdControl_g,usbpdTxBuffer);        
+                if(pdControl_g.cc_SetPDONum <= (pdControl->cc_SourcePDONum - pdControl->cc_SourcePPSNum))
+                {
+                    usbpd_sink_fixed_pdo_request(fixedSourceCap, pdControl_g.cc_SetPDONum, &pdControl_g,usbpdTxBuffer);
+                }
+                else
+                {
+                    usbpd_sink_pps_pdo_request(ppsSourceCap, pdControl_g.cc_SetPDONum, pdControl_g.cc_SetTargetVoltage, &pdControl_g,usbpdTxBuffer);
+                }      
 
                 usbpd_sink_phy_send_data(usbpdTxBuffer, 6, USBPD_SOP0);
             }

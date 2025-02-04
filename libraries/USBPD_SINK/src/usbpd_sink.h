@@ -184,6 +184,7 @@ typedef struct
     volatile uint16_t   cc_WaitTime;
     volatile uint8_t    cc_SetPDONum;
     volatile uint8_t    cc_LastSetPDONum;
+    volatile uint8_t    cc_SetTargetVoltage; // for PPS
     volatile uint8_t    cc_USBPD_READY;
 
     volatile uint8_t    cc_SourceMessageID;
@@ -211,7 +212,7 @@ uint16_t usbpd_sink_get_pps_max_voltage(int index);
 uint16_t usbpd_sink_get_pps_current(int index);
 
 bool usbpd_sink_set_request_fixed_voltage(Request_voltage_t requestVoltage);
-
+bool usbpd_sink_set_request_pps_voltage(int ppsIndex, int targetVoltage);
 
 #ifdef __cplusplus
 }
