@@ -131,8 +131,8 @@ bool usbpd_sink_set_request_pps_voltage(int ppsIndex, int targetVoltage)
     }
 
     // Set requested voltage
-    pdControl_g.cc_SetPDONum = ppsIndex + 1 + usbpd_sink_get_pdo_num();
     pdControl_g.cc_SetTargetVoltage = targetVoltage;
+    pdControl_g.cc_SetPDONum = ppsIndex + 1 + usbpd_sink_get_pdo_num();
     
     return true;
 }
@@ -193,6 +193,7 @@ void usbpd_sink_reset(void)
     pdControl_g.cc_SetPDONum = 1;
     pdControl_g.cc_LastSetPDONum = 1;
     pdControl_g.cc_SetTargetVoltage = 0;
+    pdControl_g.cc_LastTargetVoltage = 0;
 }
 
 void usbpd_sink_init(void)
@@ -454,24 +455,34 @@ void usbpd_sink_process(void)
         case CC_GET_SOURCE_CAP:
         {
             pdControl_g.cc_USBPD_READY = 1; 
-            if(pdControl_g.cc_SetPDONum != pdControl_g.cc_LastSetPDONum)
+            // if(pdControl_g.cc_SetPDONum != pdControl_g.cc_LastSetPDONum)
+            // {
+            //     pdControl_g.cc_LastSetPDONum = pdControl_g.cc_SetPDONum;
+            //     pdControl_g.cc_USBPD_READY = 0; 
+            //     // Delay_Ms(5);
+            //     messageHeader.d16 = 0u;
+            //     messageHeader.MessageHeader.MessageID = pdControl_g.cc_SinkMessageID;
+            //     messageHeader.MessageHeader.MessageType = USBPD_CONTROL_MSG_GET_SRC_CAP;
+            //     messageHeader.MessageHeader.NumberOfDataObjects = 0u;
+            //     messageHeader.MessageHeader.SpecificationRevision = pdControl_g.cc_PD_Version;
+            //     *(uint16_t*)&usbpdTxBuffer[0] =  messageHeader.d16;
+
+
+            //     usbpd_sink_phy_send_data(  usbpdTxBuffer, 2, USBPD_SOP0 );
+
+            //     pdControl_g.cc_State = CC_GET_SOURCE_CAP+1;
+            // }
+            
+            // TODO: 電圧変更時にUSBPD_CONTROL_MSG_GET_SRC_CAPを再送すると、返ってくるデータにPPSが含まれていないため
+            //       その後でPPSを設定できなくなってしまう。そのためスキップして、CC_SEND_REQUESTに飛ばすようにする。
+            //       （根本的に何か間違ってる気がするが、一応これで動く）
+            if (pdControl_g.cc_SetPDONum != pdControl_g.cc_LastSetPDONum || pdControl_g.cc_TargetVoltage != pdControl_g.cc_LastTargetVoltage)
             {
                 pdControl_g.cc_LastSetPDONum = pdControl_g.cc_SetPDONum;
-                pdControl_g.cc_USBPD_READY = 0; 
-                // Delay_Ms(5);
-                messageHeader.d16 = 0u;
-                messageHeader.MessageHeader.MessageID = pdControl_g.cc_SinkMessageID;
-                messageHeader.MessageHeader.MessageType = USBPD_CONTROL_MSG_GET_SRC_CAP;
-                messageHeader.MessageHeader.NumberOfDataObjects = 0u;
-                messageHeader.MessageHeader.SpecificationRevision = pdControl_g.cc_PD_Version;
-                *(uint16_t*)&usbpdTxBuffer[0] =  messageHeader.d16;
-
-
-                usbpd_sink_phy_send_data(  usbpdTxBuffer, 2, USBPD_SOP0 );
-
-                pdControl_g.cc_State = CC_GET_SOURCE_CAP+1;
+                pdControl_g.cc_LastTargetVoltage = pdControl_g.cc_TargetVoltage;
+                pdControl_g.cc_USBPD_READY = 0;
+                pdControl_g.cc_State = CC_SEND_REQUEST;
             }
-            
             break;
         }
 
