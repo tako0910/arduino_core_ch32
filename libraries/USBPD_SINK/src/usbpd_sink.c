@@ -131,7 +131,7 @@ bool usbpd_sink_set_request_pps_voltage(int ppsIndex, int targetVoltage)
     }
 
     // Set requested voltage
-    pdControl_g.cc_SetTargetVoltage = targetVoltage;
+    pdControl_g.cc_TargetVoltage = targetVoltage;
     pdControl_g.cc_SetPDONum = ppsIndex + 1 + usbpd_sink_get_pdo_num();
     
     return true;
@@ -192,7 +192,7 @@ void usbpd_sink_reset(void)
     pdControl_g.cc_USBPD_READY = 0;
     pdControl_g.cc_SetPDONum = 1;
     pdControl_g.cc_LastSetPDONum = 1;
-    pdControl_g.cc_SetTargetVoltage = 0;
+    pdControl_g.cc_TargetVoltage = 0;
     pdControl_g.cc_LastTargetVoltage = 0;
 }
 
@@ -419,7 +419,7 @@ void usbpd_sink_process(void)
                 }
                 else
                 {
-                    usbpd_sink_pps_pdo_request(ppsSourceCap, pdControl_g.cc_SetPDONum, pdControl_g.cc_SetTargetVoltage, &pdControl_g,usbpdTxBuffer);
+                    usbpd_sink_pps_pdo_request(ppsSourceCap, pdControl_g.cc_SetPDONum, pdControl_g.cc_TargetVoltage, &pdControl_g,usbpdTxBuffer);
                 }      
 
                 usbpd_sink_phy_send_data(usbpdTxBuffer, 6, USBPD_SOP0);

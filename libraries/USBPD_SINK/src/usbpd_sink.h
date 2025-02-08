@@ -191,7 +191,7 @@ typedef struct
     volatile uint8_t    cc_SinkGoodCRCOver;
     volatile uint8_t    cc_SourceGoodCRCOver;
 
-    volatile uint16_t    cc_SetTargetVoltage; // for PPS
+    volatile uint16_t    cc_TargetVoltage; // for PPS
     volatile uint16_t    cc_LastTargetVoltage;
 }pd_control_t;
 
