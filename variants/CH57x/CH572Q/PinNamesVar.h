@@ -1,37 +1,14 @@
-/*
- *******************************************************************************
- * Custom implementation for CH570/CH572 microcontroller family
- * Based on the CH570/CH572 datasheet and reference manual
- *
- * Licensed under the BSD 3-Clause License
- * You may obtain a copy of the License at:
- *                        opensource.org/licenses/BSD-3-Clause
- *
- *******************************************************************************
- */
+/* CH57x specific pins for CH572Q */
 
-#ifndef _PINNAMES_VAR_H
-#define _PINNAMES_VAR_H
+/* RF pin */
+RF_ANT = 0x600,  // RF Antenna pin (0x600 is in unused ALT range)
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+/* BLE pins (CH572Q only) */
+BLE_TX = 0x610,  // BLE UART TX
+BLE_RX = 0x611,  // BLE UART RX
 
-/* If this file is edited, please ensure that Z_STARTUP_FILE is updated */
-/* to include the correct objects for the variant */
-
-// Default pin names for CH572 32-pin package
-// Digital PinName array
-extern const PinName digitalPin[];
-
-// ADC PinName array
-extern const PinName analogInputPin[];
-
-// Analog PinName array (for analogWrite)
-extern const PinName analogOutputPin[];
-
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* _PINNAMES_VAR_H */
+/* Comparator pins */
+COMP_IN0 = 0x601,  // Comparator input 0
+COMP_IN1 = 0x602,  // Comparator input 1
+COMP_IN2 = 0x603,  // Comparator input 2
+COMP_IN3 = 0x604,  // Comparator input 3
