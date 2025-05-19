@@ -1,18 +1,18 @@
 {
   "build": {
     "core": "arduino",
-    "extra_flags": "-DARDUINO_CH572 -DCH57x",
+    "extra_flags": "-DARDUINO_CH570D -DCH57x",
     "f_cpu": "100000000L",
     "mabi": "ilp32",
     "march": "rv32imcxw",
     "mcmodel": "medlow",
     "mcu": "QingKe-V3C",
-    "variant": "CH57x/CH572"
+    "variant": "CH57x/CH570D"
   },
   "frameworks": [
     "arduino"
   ],
-  "name": "CH572 EVT",
+  "name": "CH570D EVT",
   "upload": {
     "maximum_ram_size": 12288,
     "maximum_size": 245760,

@@ -10,8 +10,8 @@
  *******************************************************************************
  */
 
-#ifndef _VARIANT_CH572_H_
-#define _VARIANT_CH572_H_
+#ifndef _VARIANT_CH570D_H_
+#define _VARIANT_CH570D_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -64,9 +64,6 @@ enum {
   // USB pins
   USB_DM = PB11,
   USB_DP = PB12,
-  
-  // Bluetooth RF pins
-  RF_ANT = PB14,  // RF Antenna connection
 };
 
 // Digital I/O
@@ -86,7 +83,7 @@ enum {
 
 // ADC resolution is 4 bits (via comparator)
 #define ADC_RESOLUTION          4
-#define DACC_RESOLUTION         0 // CH572 does not have true DAC
+#define DACC_RESOLUTION         0 // CH570 does not have true DAC
 
 // PWM resolution
 #define PWM_RESOLUTION          16
@@ -114,17 +111,12 @@ enum {
 #define PIN_SERIAL_RX           PA10
 #define PIN_SERIAL_TX           PA9
 
-// BLE definitions
-#define BLE_SUPPORTED           1 // CH572 supports BLE
-#define BLE_DEFAULT_POWER       0  // 0dBm default power
-
 // Extra HAL modules
 #define HAL_DAC_MODULE_ENABLED
 #define HAL_I2C_MODULE_ENABLED
 #define HAL_SPI_MODULE_ENABLED
 #define HAL_UART_MODULE_ENABLED
 #define HAL_USB_MODULE_ENABLED
-#define HAL_BLE_MODULE_ENABLED  // CH572 specific
 #define HAL_GPIO_MODULE_ENABLED
 #define HAL_EXTI_MODULE_ENABLED
 #define HAL_PWR_MODULE_ENABLED
@@ -156,4 +148,4 @@ enum {
   #endif
 #endif
 
-#endif /* _VARIANT_CH572_H_ */
+#endif /* _VARIANT_CH570D_H_ */

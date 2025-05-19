@@ -1,3 +1,0 @@
-# CH572
-NODE_CH572.build.board=CH572
-NODE_CH572.build.variant_h=variant_CH572.h

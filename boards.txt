@@ -892,37 +892,37 @@ CH57x_EVT.build.variant_h=variant_{build.board}.h
 CH57x_EVT.debug.tool=gdb-WCH_LinkE
 
 
-#CH570 EVT Board
-CH57x_EVT.menu.pnum.CH570=CH570 EVT
-CH57x_EVT.menu.pnum.CH570.node=NODE_CH570
-CH57x_EVT.menu.pnum.CH570.upload.maximum_size=245760
-CH57x_EVT.menu.pnum.CH570.upload.maximum_data_size=12288
-CH57x_EVT.menu.pnum.CH570.build.mcu=QingKe-V3C
-CH57x_EVT.menu.pnum.CH570.build.board=CH570
-CH57x_EVT.menu.pnum.CH570.build.series=CH57x
-CH57x_EVT.menu.pnum.CH570.build.variant=CH57x/CH570
-CH57x_EVT.menu.pnum.CH570.build.chip=CH570
-CH57x_EVT.menu.pnum.CH570.build.march=rv32imcxw
-CH57x_EVT.menu.pnum.CH570.build.mabi=ilp32
-CH57x_EVT.menu.pnum.CH570.build.math_lib_gcc=-lm
-CH57x_EVT.menu.pnum.CH570.build.IQ_math_RV32=
-CH57x_EVT.menu.pnum.CH570.build.ch_extra_lib=-lprintf
+#CH570D EVT Board
+CH57x_EVT.menu.pnum.CH570D=CH570D EVT
+CH57x_EVT.menu.pnum.CH570D.node=NODE_CH570D
+CH57x_EVT.menu.pnum.CH570D.upload.maximum_size=245760
+CH57x_EVT.menu.pnum.CH570D.upload.maximum_data_size=12288
+CH57x_EVT.menu.pnum.CH570D.build.mcu=QingKe-V3C
+CH57x_EVT.menu.pnum.CH570D.build.board=CH570D
+CH57x_EVT.menu.pnum.CH570D.build.series=CH57x
+CH57x_EVT.menu.pnum.CH570D.build.variant=CH57x/CH570D
+CH57x_EVT.menu.pnum.CH570D.build.chip=CH570D
+CH57x_EVT.menu.pnum.CH570D.build.march=rv32imcxw
+CH57x_EVT.menu.pnum.CH570D.build.mabi=ilp32
+CH57x_EVT.menu.pnum.CH570D.build.math_lib_gcc=-lm
+CH57x_EVT.menu.pnum.CH570D.build.IQ_math_RV32=
+CH57x_EVT.menu.pnum.CH570D.build.ch_extra_lib=-lprintf
 
-#CH572 EVT Board
-CH57x_EVT.menu.pnum.CH572=CH572 EVT
-CH57x_EVT.menu.pnum.CH572.node=NODE_CH572
-CH57x_EVT.menu.pnum.CH572.upload.maximum_size=245760
-CH57x_EVT.menu.pnum.CH572.upload.maximum_data_size=12288
-CH57x_EVT.menu.pnum.CH572.build.mcu=QingKe-V3C
-CH57x_EVT.menu.pnum.CH572.build.board=CH572
-CH57x_EVT.menu.pnum.CH572.build.series=CH57x
-CH57x_EVT.menu.pnum.CH572.build.variant=CH57x/CH572
-CH57x_EVT.menu.pnum.CH572.build.chip=CH572
-CH57x_EVT.menu.pnum.CH572.build.march=rv32imcxw
-CH57x_EVT.menu.pnum.CH572.build.mabi=ilp32
-CH57x_EVT.menu.pnum.CH572.build.math_lib_gcc=-lm
-CH57x_EVT.menu.pnum.CH572.build.IQ_math_RV32=
-CH57x_EVT.menu.pnum.CH572.build.ch_extra_lib=-lprintf
+#CH572Q EVT Board
+CH57x_EVT.menu.pnum.CH572Q=CH572Q EVT
+CH57x_EVT.menu.pnum.CH572Q.node=NODE_CH572Q
+CH57x_EVT.menu.pnum.CH572Q.upload.maximum_size=245760
+CH57x_EVT.menu.pnum.CH572Q.upload.maximum_data_size=12288
+CH57x_EVT.menu.pnum.CH572Q.build.mcu=QingKe-V3C
+CH57x_EVT.menu.pnum.CH572Q.build.board=CH572Q
+CH57x_EVT.menu.pnum.CH572Q.build.series=CH57x
+CH57x_EVT.menu.pnum.CH572Q.build.variant=CH57x/CH572Q
+CH57x_EVT.menu.pnum.CH572Q.build.chip=CH572Q
+CH57x_EVT.menu.pnum.CH572Q.build.march=rv32imcxw
+CH57x_EVT.menu.pnum.CH572Q.build.mabi=ilp32
+CH57x_EVT.menu.pnum.CH572Q.build.math_lib_gcc=-lm
+CH57x_EVT.menu.pnum.CH572Q.build.IQ_math_RV32=
+CH57x_EVT.menu.pnum.CH572Q.build.ch_extra_lib=-lprintf
 
 
 # Upload menu
