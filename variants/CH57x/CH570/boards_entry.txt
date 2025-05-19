@@ -1,0 +1,3 @@
+# CH570
+NODE_CH570.build.board=CH570
+NODE_CH570.build.variant_h=variant_CH570.h

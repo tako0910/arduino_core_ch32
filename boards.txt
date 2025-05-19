@@ -879,3 +879,132 @@ CH32L10x_EVT.menu.rtlib.nanofps.build.flags.ldflags=--specs=nano.specs --specs=n
 CH32L10x_EVT.menu.rtlib.full=Newlib Standard
 CH32L10x_EVT.menu.rtlib.full.build.flags.ldflags=--specs=nosys.specs
 
+
+##############################################################################
+##CH57x_EVT Board   
+
+CH57x_EVT.name=CH57x
+CH57x_EVT.build.core=arduino
+CH57x_EVT.build.board=CH57x_EVT
+CH57x_EVT.upload.maximum_size=0
+CH57x_EVT.upload.maximum_data_size=0
+CH57x_EVT.build.variant_h=variant_{build.board}.h
+CH57x_EVT.debug.tool=gdb-WCH_LinkE
+
+
+#CH570 EVT Board
+CH57x_EVT.menu.pnum.CH570=CH570 EVT
+CH57x_EVT.menu.pnum.CH570.node=NODE_CH570
+CH57x_EVT.menu.pnum.CH570.upload.maximum_size=245760
+CH57x_EVT.menu.pnum.CH570.upload.maximum_data_size=12288
+CH57x_EVT.menu.pnum.CH570.build.mcu=QingKe-V3C
+CH57x_EVT.menu.pnum.CH570.build.board=CH570
+CH57x_EVT.menu.pnum.CH570.build.series=CH57x
+CH57x_EVT.menu.pnum.CH570.build.variant=CH57x/CH570
+CH57x_EVT.menu.pnum.CH570.build.chip=CH570
+CH57x_EVT.menu.pnum.CH570.build.march=rv32imcxw
+CH57x_EVT.menu.pnum.CH570.build.mabi=ilp32
+CH57x_EVT.menu.pnum.CH570.build.math_lib_gcc=-lm
+CH57x_EVT.menu.pnum.CH570.build.IQ_math_RV32=
+CH57x_EVT.menu.pnum.CH570.build.ch_extra_lib=-lprintf
+
+#CH572 EVT Board
+CH57x_EVT.menu.pnum.CH572=CH572 EVT
+CH57x_EVT.menu.pnum.CH572.node=NODE_CH572
+CH57x_EVT.menu.pnum.CH572.upload.maximum_size=245760
+CH57x_EVT.menu.pnum.CH572.upload.maximum_data_size=12288
+CH57x_EVT.menu.pnum.CH572.build.mcu=QingKe-V3C
+CH57x_EVT.menu.pnum.CH572.build.board=CH572
+CH57x_EVT.menu.pnum.CH572.build.series=CH57x
+CH57x_EVT.menu.pnum.CH572.build.variant=CH57x/CH572
+CH57x_EVT.menu.pnum.CH572.build.chip=CH572
+CH57x_EVT.menu.pnum.CH572.build.march=rv32imcxw
+CH57x_EVT.menu.pnum.CH572.build.mabi=ilp32
+CH57x_EVT.menu.pnum.CH572.build.math_lib_gcc=-lm
+CH57x_EVT.menu.pnum.CH572.build.IQ_math_RV32=
+CH57x_EVT.menu.pnum.CH572.build.ch_extra_lib=-lprintf
+
+
+# Upload menu
+CH57x_EVT.menu.upload_method.swdMethod=WCH-SWD
+CH57x_EVT.menu.upload_method.swdMethod.upload.protocol=
+CH57x_EVT.menu.upload_method.swdMethod.upload.options=
+CH57x_EVT.menu.upload_method.swdMethod.upload.tool=WCH_linkE
+CH57x_EVT.menu.upload_method.ispMethod=WCH-ISP
+CH57x_EVT.menu.upload_method.ispMethod.upload.protocol=
+CH57x_EVT.menu.upload_method.ispMethod.upload.options=
+CH57x_EVT.menu.upload_method.ispMethod.upload.tool=wchisp
+
+
+# Clock Select
+CH57x_EVT.menu.clock.100MHz_HSI=100MHz Internal
+CH57x_EVT.menu.clock.100MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_100MHz_HSI=100000000 -DF_CPU=100000000
+CH57x_EVT.menu.clock.80MHz_HSI=80MHz Internal
+CH57x_EVT.menu.clock.80MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_80MHz_HSI=80000000 -DF_CPU=80000000
+CH57x_EVT.menu.clock.60MHz_HSI=60MHz Internal
+CH57x_EVT.menu.clock.60MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_60MHz_HSI=60000000 -DF_CPU=60000000
+CH57x_EVT.menu.clock.40MHz_HSI=40MHz Internal
+CH57x_EVT.menu.clock.40MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_40MHz_HSI=40000000 -DF_CPU=40000000
+CH57x_EVT.menu.clock.20MHz_HSI=20MHz Internal
+CH57x_EVT.menu.clock.20MHz_HSI.build.flags.clock=-DSYSCLK_FREQ_20MHz_HSI=20000000 -DF_CPU=20000000
+CH57x_EVT.menu.clock.HSI=HSI Internal
+CH57x_EVT.menu.clock.HSI.build.flags.clock=-DSYSCLK_FREQ_HSI=HSI_VALUE -DF_CPU=HSI_VALUE
+CH57x_EVT.menu.clock.100MHz_HSE=100MHz External
+CH57x_EVT.menu.clock.100MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_100MHz_HSE=100000000 -DF_CPU=100000000
+CH57x_EVT.menu.clock.80MHz_HSE=80MHz External
+CH57x_EVT.menu.clock.80MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_80MHz_HSE=80000000 -DF_CPU=80000000
+CH57x_EVT.menu.clock.60MHz_HSE=60MHz External
+CH57x_EVT.menu.clock.60MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_60MHz_HSE=60000000 -DF_CPU=60000000
+CH57x_EVT.menu.clock.40MHz_HSE=40MHz External
+CH57x_EVT.menu.clock.40MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_40MHz_HSE=40000000 -DF_CPU=40000000
+CH57x_EVT.menu.clock.20MHz_HSE=20MHz External
+CH57x_EVT.menu.clock.20MHz_HSE.build.flags.clock=-DSYSCLK_FREQ_20MHz_HSE=20000000 -DF_CPU=20000000
+CH57x_EVT.menu.clock.HSE=HSE External
+CH57x_EVT.menu.clock.HSE.build.flags.clock=-DSYSCLK_FREQ_HSE=HSE_VALUE -DF_CPU=HSE_VALUE
+
+
+# Optimizations
+CH57x_EVT.menu.opt.osstd=Smallest (-Os default)
+CH57x_EVT.menu.opt.osstd.build.flags.optimize=-Os
+CH57x_EVT.menu.opt.oslto=Smallest (-Os) with LTO
+CH57x_EVT.menu.opt.oslto.build.flags.optimize=-Os -flto
+CH57x_EVT.menu.opt.o1std=Fast (-O1)
+CH57x_EVT.menu.opt.o1std.build.flags.optimize=-O1
+CH57x_EVT.menu.opt.o1lto=Fast (-O1) with LTO
+CH57x_EVT.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+CH57x_EVT.menu.opt.o2std=Faster (-O2)
+CH57x_EVT.menu.opt.o2std.build.flags.optimize=-O2
+CH57x_EVT.menu.opt.o2lto=Faster (-O2) with LTO
+CH57x_EVT.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+CH57x_EVT.menu.opt.o3std=Fastest (-O3)
+CH57x_EVT.menu.opt.o3std.build.flags.optimize=-O3
+CH57x_EVT.menu.opt.o3lto=Fastest (-O3) with LTO
+CH57x_EVT.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+CH57x_EVT.menu.opt.ogstd=Debug (-Og)
+CH57x_EVT.menu.opt.ogstd.build.flags.optimize=-Og
+CH57x_EVT.menu.opt.o0std=No Optimization (-O0)
+CH57x_EVT.menu.opt.o0std.build.flags.optimize=-O0
+
+
+# Debug information
+CH57x_EVT.menu.dbg.none=None
+CH57x_EVT.menu.dbg.none.build.flags.debug=-DNDEBUG
+CH57x_EVT.menu.dbg.enable_sym=Symbols Enabled (-g)
+CH57x_EVT.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+CH57x_EVT.menu.dbg.enable_log=Core logs Enabled
+CH57x_EVT.menu.dbg.enable_log.build.flags.debug=
+CH57x_EVT.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+CH57x_EVT.menu.dbg.enable_all.build.flags.debug=-g
+
+
+# C Runtime Library
+CH57x_EVT.menu.rtlib.nano=Newlib Nano (default)
+CH57x_EVT.menu.rtlib.nano.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs
+CH57x_EVT.menu.rtlib.nanofp=Newlib Nano + Float Printf
+CH57x_EVT.menu.rtlib.nanofp.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float
+CH57x_EVT.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+CH57x_EVT.menu.rtlib.nanofs.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _scanf_float
+CH57x_EVT.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+CH57x_EVT.menu.rtlib.nanofps.build.flags.ldflags=--specs=nano.specs --specs=nosys.specs -u _printf_float -u _scanf_float
+CH57x_EVT.menu.rtlib.full=Newlib Standard
+CH57x_EVT.menu.rtlib.full.build.flags.ldflags=--specs=nosys.specs
