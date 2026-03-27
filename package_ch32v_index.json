@@ -157,10 +157,10 @@
             },
             {
               "host": "x86_64-apple-darwin",
-              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
-              "archiveFileName": "minichlink-832b90.tar.gz",
-              "checksum": "SHA-256:3E7968F16E03558FD0D48B2D1E5C2C0342A54AB259FD9951C605B53A65ABFCEE",
-              "size": "693617"
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90-macos.tar.gz",
+              "archiveFileName": "minichlink-832b90-macos.tar.gz",
+              "checksum": "SHA-256:CF9DA7E586E60EE3C48DF46F7A103818841475DB9C1EC60A68818C6DEF7A9C73",
+              "size": "389206"
             }
           ]
         }		
