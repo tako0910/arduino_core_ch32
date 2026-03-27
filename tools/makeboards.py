@@ -46,6 +46,7 @@ board_list = {
         'hse': [48, 24, 8],
         'pnums': {
             'CH32V006K8': {'name': 'CH32V006K8 EVT', 'maximum_size': 63488, 'maximum_data_size': 8192, 'mcu': 'QingKe-V2C', 'chip': 'CH32V006K8'},
+            'UIAPDUINO_PRO_MICRO_CH32V006_V1_1': {'name': 'UIAPduino Pro Micro CH32V006 V1.1', 'maximum_size': 63488, 'maximum_data_size': 8192, 'mcu': 'QingKe-V2C', 'chip': 'CH32V006K8'},
         }
     },
     'CH32X035': {
