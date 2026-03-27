@@ -16,8 +16,8 @@
           "category": "Contributed",
           "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/arduino_core_ch32-0.0.1.zip",
           "archiveFileName": "arduino_core_ch32-0.0.1.zip",
-          "checksum": "SHA-256:CF489356B378F6FE7D929E61169320E0DC7BD9B5CAEC2BA45337BA95F9456E6A",
-          "size": "1345684",
+          "checksum": "SHA-256:A164A4570BD78642E30C18656E8D81E2CBBFCB35D349A89B3E62B4DB1B134C65",
+          "size": "1346578",
           "boards": [
             {"name": "CH32V00x EVT Board"},
             {"name": "CH32VM00X EVT Board"},
@@ -145,22 +145,22 @@
               "host": "x86_64-linux-gnu",
               "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
               "archiveFileName": "minichlink-832b90.tar.gz",
-              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
-              "size": "593637"
+              "checksum": "SHA-256:3E7968F16E03558FD0D48B2D1E5C2C0342A54AB259FD9951C605B53A65ABFCEE",
+              "size": "693617"
             },
             {
               "host": "i686-mingw32",
               "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
               "archiveFileName": "minichlink-832b90.tar.gz",
-              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
-              "size": "593637"
+              "checksum": "SHA-256:3E7968F16E03558FD0D48B2D1E5C2C0342A54AB259FD9951C605B53A65ABFCEE",
+              "size": "693617"
             },
             {
               "host": "x86_64-apple-darwin",
               "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
               "archiveFileName": "minichlink-832b90.tar.gz",
-              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
-              "size": "593637"
+              "checksum": "SHA-256:3E7968F16E03558FD0D48B2D1E5C2C0342A54AB259FD9951C605B53A65ABFCEE",
+              "size": "693617"
             }
           ]
         }		
