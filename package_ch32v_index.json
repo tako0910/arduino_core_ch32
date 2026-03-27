@@ -1,155 +1,53 @@
 {
   "packages": [
     {
-      "name": "WCH",
-      "websiteURL": "https://www.wch.cn/",
-      "maintainer": "WCH",
-      "email": "tech@wch.cn",
+      "name": "tako0910",
+      "websiteURL": "https://github.com/tako0910/",
+      "maintainer": "tako0910",
+      "email": "tako.oct0910@gmail.com",
       "help": {
-        "online": "https://www.wch.cn/"
+        "online": "https://github.com/tako0910/"
       },
       "platforms": [
         {
-          "name": "CH32 MCU EVT Boards",
+          "name": "tako0910 ch32 test boards",
           "architecture": "ch32v",
-          "version": "1.0.0",
+          "version": "0.0.1",
           "category": "Contributed",
-          "url": "https://codeload.github.com/openwch/arduino_core_ch32/zip/refs/tags/1.0.0",
-          "archiveFileName": "arduino_core_ch32-1.0.0.zip",
-          "checksum": "SHA-256:6FD92A6C0054979A460E6C14AC656FBACAC3BEFAB92F33D4B1B7C0A0E035FD86",
-          "size": "411583",
+          "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/arduino_core_ch32-0.0.1.zip",
+          "archiveFileName": "arduino_core_ch32-0.0.1.zip",
+          "checksum": "SHA-256:CF489356B378F6FE7D929E61169320E0DC7BD9B5CAEC2BA45337BA95F9456E6A",
+          "size": "1345684",
           "boards": [
+            {"name": "CH32V00x EVT Board"},
+            {"name": "CH32VM00X EVT Board"},
+            {"name": "CH32X035 EVT Board"},
+            {"name": "CH32V10x EVT Board"},
             {"name": "CH32V20x EVT Board"},
-            {"name": "CH32V00x EVT Board"}
-          ],
-          "toolsDependencies": [
-            {
-              "packager": "WCH",
-              "name": "riscv-none-embed-gcc",
-              "version": "8.2.0"
-            },
-            {
-              "packager": "WCH",
-              "name": "openocd",
-              "version": "1.0.0"
-            }
-          ]
-        },
-        {
-          "name": "CH32 MCU EVT Boards",
-          "architecture": "ch32v",
-          "version": "1.0.1",
-          "category": "Contributed",
-          "url": "https://codeload.github.com/openwch/arduino_core_ch32/zip/refs/tags/1.0.1",
-          "archiveFileName": "arduino_core_ch32-1.0.1.zip",
-          "checksum": "SHA-256:964E924D3B2CA648DD70F3E1D87BBB2E62869F9ECA23604745060A1B4AA26739",
-          "size": "553015",
-          "boards": [
-            {"name": "CH32X035 EVT Board"},		  
-            {"name": "CH32V20x EVT Board"},
-            {"name": "CH32V00x EVT Board"}
-          ],
-          "toolsDependencies": [
-            {
-              "packager": "WCH",
-              "name": "riscv-none-embed-gcc",
-              "version": "8.2.0"
-            },
-            {
-              "packager": "WCH",
-              "name": "openocd",
-              "version": "1.0.0"
-            }
-          ]
-        },
-        {
-          "name": "CH32 MCU EVT Boards",
-          "architecture": "ch32v",
-          "version": "1.0.2",
-          "category": "Contributed",
-          "url": "https://codeload.github.com/openwch/arduino_core_ch32/zip/refs/tags/1.0.2",
-          "archiveFileName": "arduino_core_ch32-1.0.2.zip",
-          "checksum": "SHA-256:C7CF46D0AA447B78FBF239251085D009B47F436B3A22C14AC116D7FA4E492397",
-          "size": "583402",
-          "boards": [
-            {"name": "CH32X035 EVT Board"},		  
-            {"name": "CH32V20x EVT Board"},
-            {"name": "CH32V00x EVT Board"}
-          ],
-          "toolsDependencies": [
-            {
-              "packager": "WCH",
-              "name": "riscv-none-embed-gcc",
-              "version": "8.2.0"
-            },
-            {
-              "packager": "WCH",
-              "name": "openocd",
-              "version": "1.0.0"
-            }
-          ]
-        },
-        {
-          "name": "CH32 MCU EVT Boards",
-          "architecture": "ch32v",
-          "version": "1.0.3",
-          "category": "Contributed",
-          "url": "https://codeload.github.com/openwch/arduino_core_ch32/zip/refs/tags/1.0.3",
-          "archiveFileName": "arduino_core_ch32-1.0.3.zip",
-          "checksum": "SHA-256:233B4DC7D1930BBE93FC0F00964ADFC24DDC012585121D113F98CEF8652A1362",
-          "size": "964954",
-          "boards": [
-            {"name": "CH32X035 EVT Board"},		  
             {"name": "CH32V30x EVT Board"},
-            {"name": "CH32V20x EVT Board"},			
-            {"name": "CH32V10x EVT Board"},			
-            {"name": "CH32V00x EVT Board"}
+            {"name": "CH32L10x EVT Board"}
           ],
           "toolsDependencies": [
             {
-              "packager": "WCH",
+              "packager": "tako0910",
               "name": "riscv-none-embed-gcc",
               "version": "8.2.0"
             },
             {
-              "packager": "WCH",
-              "name": "openocd",
-              "version": "1.0.0"
-            }
-          ]
-        },
-        {
-          "name": "CH32 MCU EVT Boards",
-          "architecture": "ch32v",
-          "version": "1.0.4",
-          "category": "Contributed",
-          "url": "https://codeload.github.com/openwch/arduino_core_ch32/zip/refs/tags/1.0.4",
-          "archiveFileName": "arduino_core_ch32-1.0.4.zip",
-          "checksum": "SHA-256:8F4E975F763183791AAAC5E537584DFD13DD044BD5DC05D09B0E2C7DECCD14C5",
-          "size": "980095",
-          "boards": [
-            {"name": "CH32X035 EVT Board"},		  
-            {"name": "CH32V30x EVT Board"},
-            {"name": "CH32V20x EVT Board"},			
-            {"name": "CH32V10x EVT Board"},			
-            {"name": "CH32V00x EVT Board"}
-          ],
-          "toolsDependencies": [
-            {
-              "packager": "WCH",
-              "name": "riscv-none-embed-gcc",
-              "version": "8.2.0"
-            },
-            {
-              "packager": "WCH",
+              "packager": "tako0910",
               "name": "openocd",
               "version": "1.0.0"
             },
             {
-              "packager": "WCH",
+              "packager": "tako0910",
               "name": "beforeinstall",
               "version": "1.0.0"
-            }			
+            },
+            {
+              "packager": "tako0910",
+              "name": "minichlink-832b90",
+              "version": "1.0.0"
+            }
           ]
         }		
       ],
@@ -236,6 +134,34 @@
               "checksum": "SHA-256:A7267A36A698BDA4200EFD67068B67F36326D645E9BE37FD85DF9157D4AA18A1",
               "size": "365"
             }				
+          ]
+        },
+        {
+          "name": "minichlink-832b90",
+          "version": "1.0.0",
+          "systems":
+          [
+            {
+              "host": "x86_64-linux-gnu",
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
+              "archiveFileName": "minichlink-832b90.tar.gz",
+              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
+              "size": "593637"
+            },
+            {
+              "host": "i686-mingw32",
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
+              "archiveFileName": "minichlink-832b90.tar.gz",
+              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
+              "size": "593637"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/minichlink-832b90.tar.gz",
+              "archiveFileName": "minichlink-832b90.tar.gz",
+              "checksum": "SHA-256:ED3DB1E73938A1AAE51D42ADEC3F7B626B206FD2A466F74CE2198F528C2AB512",
+              "size": "593637"
+            }
           ]
         }		
       ]
