@@ -224,17 +224,17 @@
             },
             {
               "host": "i686-mingw32",
-              "url": "https://codeload.github.com/TianpeiLee/wch_beforeinstall_linux/tar.gz/refs/tags/1.0.0",
-              "archiveFileName": "wch_beforeinstall_linux-1.0.0.tar.gz",
-              "checksum": "SHA-256:17EF3A94BC46B9EB9AB1FDECC48FCD3880EEB8FCC36E6648626320F0BF2864DC",
-              "size": "507269"
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/wch_beforeinstall_windows_noop-1.0.0.tar.gz",
+              "archiveFileName": "wch_beforeinstall_windows_noop-1.0.0.tar.gz",
+              "checksum": "SHA-256:6D26037CFC37CAC0FAA70C92BF55CDE6A085FFD982B239815DFC66B54612EF8F",
+              "size": "315"
             },
             {
               "host": "x86_64-apple-darwin",
-              "url": "https://codeload.github.com/TianpeiLee/wch_beforeinstall_linux/tar.gz/refs/tags/1.0.0",
-              "archiveFileName": "wch_beforeinstall_linux-1.0.0.tar.gz",
-              "checksum": "SHA-256:17EF3A94BC46B9EB9AB1FDECC48FCD3880EEB8FCC36E6648626320F0BF2864DC",
-              "size": "507269"
+              "url": "https://github.com/tako0910/arduino_core_ch32/releases/download/0.0.1/wch_beforeinstall_macos_noop-1.0.0.tar.gz",
+              "archiveFileName": "wch_beforeinstall_macos_noop-1.0.0.tar.gz",
+              "checksum": "SHA-256:A7267A36A698BDA4200EFD67068B67F36326D645E9BE37FD85DF9157D4AA18A1",
+              "size": "365"
             }				
           ]
         }		

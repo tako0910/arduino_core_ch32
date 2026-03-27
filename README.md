@@ -74,6 +74,8 @@ Adopting toolchain and openocd under [MRS](http://www.mounriver.com/), supportin
 
 ### Win
 
+No post-install script is required on Windows.
+
 If you encounter an error during upload, please confirm that the version of your WCH-LINKE is consistent with the latest version under MRS. 
 WCH-LINKE related information can [refer to this link](https://github.com/openwch/ch32v307/tree/main/WCH-Link). 
 
@@ -101,6 +103,8 @@ DONE
 
 ### MAC
 
+No post-install script is required on macOS.
+
 For MAC, please install the "libusb" library before starting to use it.
 ```bash
 brew install libusb
@@ -113,5 +117,4 @@ please contact the **MRS team** for assistance through "*support@mounriver.com*"
 
 If you have any questions, you could contact me through the email "*yy@wch.cn*".
 Or you could [file an issue on GitHub](https://github.com/openwch/arduino_core_ch32/issues/new).
-
 
